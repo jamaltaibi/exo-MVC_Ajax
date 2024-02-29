@@ -1,9 +1,11 @@
 <?php 
+include '../models/model.php';
 
-// require_once "controllers/controller.php";
+$bdd = new Bdd();
 
+$resultat = $bdd->readAll();
 
-// $controller = new Controller;
-// $controller->index();
+echo json_encode($resultat);
+
 
 ?>

@@ -19,14 +19,6 @@
                 $conn->insertBdd($tache);
             } 
         }
-        function modifierTache(){
-            if(isset($_POST['idtache'], $_POST['nouvelleTache'])) {
-                $idTache = $_POST['idtache'];
-                $nouvelleTache = htmlspecialchars($_POST['nouvelleTache']);
-                $conn = new Bdd;
-                $conn->modifBdd($idTache, $nouvelleTache);
-            } 
-        }
         function supptache(){
             $suppTache = $_POST["idTache"];
             $conn = new Bdd;

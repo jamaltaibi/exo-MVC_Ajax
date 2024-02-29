@@ -26,7 +26,7 @@
             echo "data bien ajouté à la bdd";
         }
         function modifBdd($idTache, $nouvelleTache){
-                $sql = "UPDATE `Taches` SET `tache` = :nouvelleTache WHERE `id` = :idTache";
+            $sql = "UPDATE `Taches` SET `tache` = :nouvelleTache WHERE `id` = :idTache";
             $stmt = $this->connexion->prepare($sql);
             $stmt->bindParam(':nouvelleTache', $nouvelleTache);
             $stmt->bindParam(':idTache', $idTache);
@@ -38,7 +38,7 @@
             $stmtSup->bindParam(':idTache', $suppTache);
             $stmtSup->execute();
 
-        echo "data Supprimer";
-    }
+            echo "data Supprimer";
+        }
     }
 ?>
